@@ -4,7 +4,7 @@ export const getStaticProps = async () => {
   const pageContent = await builder
     .get("page", {
       userAttributes: {
-        urlPath: "/tmp-test-page",
+        urlPath: "/tmp-page",
         customer: "ocuco",
       },
       cachebust: true,
@@ -14,7 +14,7 @@ export const getStaticProps = async () => {
   const headerContent = await builder
     .get("header", {
       userAttributes: {
-        urlPath: "/tmp-test-page",
+        urlPath: "/tmp-page",
         customer: "ocuco",
       },
       cachebust: true,
@@ -24,7 +24,7 @@ export const getStaticProps = async () => {
   const footerContent = await builder
     .get("footer", {
       userAttributes: {
-        urlPath: "/tmp-test-page",
+        urlPath: "/tmp-page",
         customer: "ocuco",
       },
       cachebust: true,
@@ -39,38 +39,16 @@ export const getStaticProps = async () => {
 
 const Page = ({ pageContent, headerContent, footerContent }: any) => (
   <>
-    <BuilderComponent
-      model="header"
-      content={headerContent}
-      options={{
-        userAttributes: {
-          urlPath: "/tmp-test-page",
-          customer: "ocuco",
-        },
-      }}
-    />
+    <BuilderComponent model="header" content={headerContent} />
     <BuilderComponent
       model="page"
       content={pageContent}
-      options={{
-        userAttributes: {
-          urlPath: "/tmp-test-page",
-          customer: "ocuco",
-        },
-        cachebust: true,
+      data={{
+        exampleEssentialData:
+          "This data is essential for the symbol to display correctly",
       }}
     />
-    <BuilderComponent
-      model="footer"
-      content={footerContent}
-      options={{
-        userAttributes: {
-          urlPath: "/tmp-test-page",
-          customer: "ocuco",
-        },
-        cachebust: true,
-      }}
-    />
+    <BuilderComponent model="footer" content={footerContent} />
   </>
 );
 
