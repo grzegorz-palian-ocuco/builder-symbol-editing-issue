@@ -37,6 +37,18 @@ export const getStaticProps = async () => {
   };
 };
 
+const exampleData1 = {
+  name: "Product Foo",
+  price: 100,
+  isAvailable: true,
+};
+
+const exampleData2 = {
+  name: "Product Bar",
+  price: 200,
+  isAvailable: false,
+};
+
 const Page = ({ pageContent, headerContent, footerContent }: any) => (
   <>
     <BuilderComponent model="header" content={headerContent} />
@@ -44,6 +56,7 @@ const Page = ({ pageContent, headerContent, footerContent }: any) => (
       model="page"
       content={pageContent}
       data={{
+        exampleProduct: Math.random() > 0.5 ? exampleData1 : exampleData2,
         exampleEssentialData:
           "This data is essential for the symbol to display correctly",
       }}
