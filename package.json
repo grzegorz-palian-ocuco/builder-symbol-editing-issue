@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "20.x"
+    "node": "18.x"
   },
   "scripts": {
     "dev": "next dev -p 3001",
@@ -11,10 +11,10 @@
     "start": "next start -p 4002"
   },
   "dependencies": {
-    "@builder.io/react": "^8.0.9",
-    "@builder.io/sdk": "^6.0.4",
+    "@builder.io/react": "^3.2.7",
+    "@builder.io/sdk": "^2.0.7",
     "@next/env": "^13.5.7",
-    "next": "^15.2.1",
+    "next": "^13.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
