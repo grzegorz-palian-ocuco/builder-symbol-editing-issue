@@ -1,4 +1,4 @@
-import { builder } from "@builder.io/sdk";
+import { builder } from "@builder.io/react";
 import "src/components/test.builder";
 
 builder.init(
