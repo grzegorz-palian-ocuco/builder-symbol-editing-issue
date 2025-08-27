@@ -22,9 +22,8 @@ const Page = ({ pageContent }: any) => (
     model="page"
     content={pageContent}
     data={{
-      pill: {
-        style:
-          '{ "backgroundColor": "brown", "border": "1x solid red", "color": "white" }',
+      foo: {
+        bar: '{ "backgroundColor": "brown", "border": "1x solid red", "color": "white" }',
       },
     }}
   />
