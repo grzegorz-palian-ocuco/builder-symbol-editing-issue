@@ -1,4 +1,5 @@
 import { builder } from "@builder.io/react";
+import "src/components/json-string.builder";
 import "src/components/test.builder";
 
 builder.init(
