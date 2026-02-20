@@ -1,4 +1,5 @@
-import { builder } from '@builder.io/sdk';
+import { builder } from '@builder.io/react';
+import 'src/components/example-component';
 
 builder.init(
   process.env.NEXT_PUBLIC_BUILDER_KEY || '25f89c4d468845dd957d62fa3292ec92'
